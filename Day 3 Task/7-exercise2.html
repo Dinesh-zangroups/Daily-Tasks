@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <p>
+      <button onclick="
+        upcalc('1');
+      ">1</button>
+
+      <button onclick="
+        upcalc('2');
+      ">2</button>
+
+      <button onclick="
+        upcalc('3');
+      ">3</button>
+
+      <button onclick="
+        upcalc('+');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        upcalc('4');
+      ">4</button>
+
+      <button onclick="
+        upcalc('5');
+      ">5</button>
+
+      <button onclick="
+        upcalc('6');
+      ">6</button>
+
+      <button onclick="
+        upcalc('-');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        upcalc('7');
+      ">7</button>
+
+      <button onclick="
+        upcalc('8');
+      ">8</button>
+
+      <button onclick="
+        upcalc('9');
+      ">9</button>
+
+      <button onclick="
+        upcalc('*');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        upcalc('0');
+      ">0</button>
+
+      <button onclick="
+        upcalc('.');
+      ">.</button>
+
+      <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
+
+      <button onclick="
+        upcalc('/');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation = '';
+
+      function upcalc(value) {
+        calculation += value;
+        console.log(calculation);
+      }
+    </script>
+  </body>
+</html>

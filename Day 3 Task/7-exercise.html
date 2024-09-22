@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lsn 5</title>
+  </head>
+
+  <body>
+    <script>
+
+        
+      function greet(name){
+        console.log(`Hello ${name}`);
+      }
+      greet();
+
+      function ctof(cls){
+        console.log((cls*9)/5+32);
+      }
+
+      function ftoc(fahren){
+        console.log(((fahren-32)*5)/9);
+      }
+      ctof(25);
+      ftoc(86);
+
+      function converttemp(deg,unit){
+        if(unit==='c'){
+          console.log(`${(deg*9)/5+32}F`);
+        }
+        else if(unit==='f'){
+          console.log(`${((deg-32)*5)/9}C`);
+        }
+      }
+
+      converttemp(25,'c');
+      converttemp(86,'f');
+
+      function convertLength(len,from,to){
+        if(from==='km'&&to==='miles'){
+          return `${len/1.6} ${to}`;
+        }
+        else if(from==='km'&&to==='ft'){
+          return `${len*3281} ${to}`;
+        }
+        else if(from==='miles'&&to==='km'){
+          return `${len*1.6} ${to}`;
+        }
+        else if(from==='miles'&&to==='ft'){
+          return `${len*5280} ${to}`;
+        }
+        else if(from==='ft'&&to==='km'){
+          return `${len/3281} ${to}`;
+        }
+        else if(from==='ft'&&to==='miles'){
+          return `${len/5280} ${to}`;
+        }
+        else if(from===to){
+          return `${len} ${to}`;
+        }
+      }
+
+      console.log(convertLength(50,'miles','km'));
+      console.log(convertLength(32,'km','miles'));
+      console.log(convertLength(50,'km','km'));
+      console.log(convertLength(5,'miles','km'));
+      console.log(convertLength(5,'miles','ft'));
+      console.log(convertLength(5,'km','ft'));
+
+      function convLen(len,fromUnit,toUnit){
+        if(fromUnit!=='km'&&fromUnit!=='miles'&&fromUnit!=='ft'){
+          return `Invalid unit: ${fromUnit}`;
+        }
+        else if(toUnit!=='km'&&toUnit!=='miles'&&toUnit!=='ft'){
+          return `Invalid unit: ${toUnit}`;
+        }
+        if(fromUnit==='km'&&toUnit==='miles'){
+          return `${len/1.6} miles`;
+        }
+        else if(fromUnit==='km'&&toUnit==='ft'){
+          return `${len*3281} ft`;
+        }
+        else if(fromUnit==='miles'&&toUnit==='km'){
+          return `${len*1.6} km`;
+        }
+        else if(fromUnit==='miles'&&toUnit==='ft'){
+          return `${len*5280} ft`;
+        }
+        else if(fromUnit==='ft'&&toUnit==='km'){
+          return `${len/3281} km`;
+        }
+        else if(fromUnit==='ft'&&toUnit==='miles'){
+          return `${len/5280} miles`;
+        }
+        else if(fromUnit===toUnit){
+          return `${len} ${toUnit}`;
+        }
+      }
+
+
+      console.log(convLen(50,'miles','km'));
+      console.log(convLen(32,'km','miles'));
+      console.log(convLen(50,'km','km'));
+      console.log(convLen(5,'miles','km'));
+      console.log(convLen(5,'miles','ft'));
+      console.log(convLen(5,'km','ft'));
+      
+      console.log(convLen(5,'lbs','lbs'));
+
+    </script>
+  </body>
+</html>
