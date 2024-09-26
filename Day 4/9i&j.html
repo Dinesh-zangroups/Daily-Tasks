@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart</title>
+  </head>
+  <body>
+    <button onclick="displaycartqnt();">
+        Show Quantity
+    </button>
+
+    <button onclick="updatecartqnt(1);">
+        Add to Cart
+    </button>
+
+    <button onclick="updatecartqnt(2);">
+        +2
+    </button>
+
+    <button onclick="updatecartqnt(3);">
+        +3
+    </button>
+
+    <button onclick="updatecartqnt(4);">
+        +4
+    </button>
+
+    <button onclick="updatecartqnt(5);">
+        +5
+    </button>
+
+    <button onclick="updatecartqnt(-1);">
+        Remove from cart
+    </button>
+
+    <button onclick="updatecartqnt(-2);">
+        -2
+    </button>
+
+    <button onclick="updatecartqnt(-3);">
+        -3
+    </button>
+
+    <button onclick="cartqnt=0;
+    console.log('Cart was reset.');
+    displaycartqnt();">
+    Reset Cart
+</button>
+
+    <p class="js-cart-quantity"></p>
+
+    <script>
+      let cartqnt=0;
+
+      displaycartqnt();
+
+      function updatecartqnt(change)
+      {
+        if(cartqnt+change>10)
+        {
+          alert('The cart is full');
+          return;
+        }
+
+        if(cartqnt+change<0)
+        {
+          alert('Not enough items in the cart');
+          return;
+        }
+
+        cartqnt+=change;
+        displaycartqnt();
+      }
+
+      function displaycartqnt()
+      {
+        document.querySelector('.js-cart-quantity').innerHTML=`Cart quantity: ${cartqnt}`;
+      }
+      
+    </script>
+  </body>
+</html>

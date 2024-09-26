@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button>9a</button>
+    <button class="js-btn">9b</button>
+
+    <button onclick="
+      document.querySelector('.js-choice').innerHTML='you chose: heads';">
+      heads
+    </button>
+
+    <button onclick="
+      document.querySelector('.js-choice').innerHTML='you chose: tails';
+    ">
+       tails
+    </button>
+    <p class="js-choice"></p>
+
+    <input placeholder="name" class="js-name" onkeydown="
+      if (event.key==='enter') 
+      {
+        showmsg();
+      }
+    ">
+
+    <button onclick="showmsg();">
+        submit
+    </button>
+
+    <p class="js-msg"></p>
+
+    <p>amazcalc</p>
+
+    <input placeholder="cost of order" class="js-cost" onkeydown="
+      checkkey(event);
+    ">
+
+    <button onclick="calctotal();">
+        calculate
+    </button>
+
+    <p class="js-total"></p>
+
+    <input placeholder="type something" class="js-input" onkeyup="
+      const val = document.querySelector('.js-input');
+      document.querySelector('.js-msg').innerHTML = val.value;">
+
+    <p class="js-msg"></p>
+
+    <script>
+      console.log(document.querySelector('button'));
+
+      document.querySelector('.js-btn').innerHTML='9b done!';
+
+      function showmsg()
+      {
+        const name=document.querySelector('.js-name');
+        document.querySelector('.js-msg').innerHTML=`your name is: ${name.value}`;
+      }
+
+      function checkkey(event)
+      {
+        if (event.key==='enter') 
+        {
+          calctotal();
+        }
+      }
+
+      function calctotal()
+      {
+        const cost=document.querySelector('.js-cost');
+        let total=Number(cost.value)*100;
+        if (total < 4000) total+=1000;
+        document.querySelector('.js-total').innerHTML=`$${total / 100}`;
+      }
+      
+    </script>
+  </body>
+</html>
