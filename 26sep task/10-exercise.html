@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .amazbutton 
+      {
+        background-color:rgb(255,216,20);
+        border:none;
+        padding:5px 40px;
+        border-radius:20px;
+        cursor:pointer;
+      }
+
+      .reqbutton 
+      {
+        background-color:black;
+        color:white;
+        border:none;
+        font-weight:bold;
+        padding:12px 20px;
+        border-radius:5px;
+        cursor:pointer;
+        margin-right:20px;
+      }
+
+      .schedbutton 
+      {
+        background-color:rgb(230,230,230);
+        border:none;
+        font-weight:bold;
+        padding:12px 20px;
+        border-radius:5px;
+        cursor:pointer;
+      }
+
+      .togbutton 
+      {
+        background-color:rgb(230,230,230);
+        border:none;
+        padding:10px 15px;
+        border-radius:5px;
+        margin-right:10px;
+        font-size:15px;
+        cursor:pointer;
+      }
+
+      .tog 
+      {
+        background-color:black;
+        color:white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="amazbutton">
+        Add to Cart
+    </button>
+
+    <button class="reqbutton">
+        Request now
+    </button>
+
+    <button class="schedbutton">
+        Schedule for later
+    </button>
+
+    <button class="js-button">
+        Test
+    </button>
+
+    <button
+      class="togbutton js-button-1"
+      onclick="
+      const button=document.querySelector('.js-button-1');
+      if(!button.classList.contains('tog'))
+      {
+        button.classList.add('tog');
+      }
+      else
+      {
+        button.classList.remove('tog');
+      }"
+    >
+      Gaming
+    </button>
+
+    <button
+      class="togbutton js-button-2"
+      onclick="
+      const button=document.querySelector('.js-button-2');
+      if(!button.classList.contains('tog'))
+      {
+        button.classList.add('tog');
+      }
+      else
+      {
+        button.classList.remove('tog');
+      }"
+    >
+      Music
+    </button>
+
+    <button
+      class="togbutton js-button-3"
+      onclick="
+      const button=document.querySelector('.js-button-3');
+      if(!button.classList.contains('tog'))
+      {
+        button.classList.add('tog');
+      }
+      else
+      {
+        button.classList.remove('tog');
+      }"
+    >
+      Tech
+    </button>
+
+    <script>
+      const button1=document.querySelector('.js-button');
+      console.log(button1.classList.contains('js-button'));
+    </script>
+  </body>
+</html>

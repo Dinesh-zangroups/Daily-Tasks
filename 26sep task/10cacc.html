@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="10calc.css">
+  </head>
+  <body>
+    <p class="jscalc calc"></p>
+
+    <p>
+      <button class="btn gray" onclick="
+        updateCalc('1');
+      ">1</button>
+
+      <button class="btn gray" onclick="
+        updateCalc('2');
+      ">2</button>
+
+      <button class="btn gray" onclick="
+        updateCalc('3');
+      ">3</button>
+
+      <button class="btn orange" onclick="
+        updateCalc(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button class="btn gray" onclick="
+        updateCalc('4');
+      ">4</button>
+
+      <button class="btn gray" onclick="
+        updateCalc('5');
+      ">5</button>
+
+      <button class="btn gray" onclick="
+        updateCalc('6');
+      ">6</button>
+
+      <button class="btn orange" onclick="
+        updateCalc(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button class="btn gray" onclick="
+        updateCalc('7');
+      ">7</button>
+
+      <button class="btn gray" onclick="
+        updateCalc('8');
+      ">8</button>
+
+      <button class="btn gray" onclick="
+        updateCalc('9');
+      ">9</button>
+
+      <button class="btn orange" onclick="
+        updateCalc(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button class="btn gray" onclick="
+        updateCalc('0');
+      ">0</button>
+
+      <button class="btn gray" onclick="
+        updateCalc('.');
+      ">.</button>
+
+      <button class="btn gray" onclick="
+        calc=eval(calc);
+        displayCalc();
+        localStorage.setItem('calculation',calc);
+      ">=</button>
+
+      <button class="btn orange" onclick="
+        updateCalc(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button class="btn gray clear" onclick="
+        calc='';
+        displayCalc();
+        localStorage.setItem('calculation',calc);
+      ">Clear</button>
+    </p>
+
+    <script src="10calc.js"></script>
+  </body>
+</html>
